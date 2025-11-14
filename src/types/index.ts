@@ -12,6 +12,7 @@ export interface Patient {
   zipCode: string;
   bloodType?: string;
   allergies?: string;
+  pacemaker?: string;
   emergencyContact?: string;
   emergencyPhone?: string;
   insurance?: string;

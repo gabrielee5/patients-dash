@@ -27,6 +27,7 @@ export const PatientForm: React.FC<PatientFormProps> = ({
     zipCode: '',
     bloodType: '',
     allergies: '',
+    pacemaker: '',
     emergencyContact: '',
     emergencyPhone: '',
     insurance: '',
@@ -51,6 +52,7 @@ export const PatientForm: React.FC<PatientFormProps> = ({
         zipCode: patient.zipCode,
         bloodType: patient.bloodType || '',
         allergies: patient.allergies || '',
+        pacemaker: patient.pacemaker || '',
         emergencyContact: patient.emergencyContact || '',
         emergencyPhone: patient.emergencyPhone || '',
         insurance: patient.insurance || '',
@@ -219,6 +221,13 @@ export const PatientForm: React.FC<PatientFormProps> = ({
             value={formData.allergies}
             onChange={(e) => handleChange('allergies', e.target.value)}
             placeholder="e.g., Penicillin, Peanuts"
+            fullWidth
+          />
+          <Input
+            label="Pacemaker"
+            value={formData.pacemaker}
+            onChange={(e) => handleChange('pacemaker', e.target.value)}
+            placeholder="e.g., Yes, No"
             fullWidth
           />
         </div>
